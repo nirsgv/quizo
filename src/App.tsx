@@ -2,13 +2,14 @@ import { useState } from 'react';
 import './App.css';
 import { QuestionItem } from './components';
 import { questions } from './constants';
+import { direction } from './types';
 
 
 function App() {
 
   let [presentedItemIdx, setPresentedItemIdx] = useState(0);
 
-  const handleClick = (direction: string) => {
+  const handleClick = (direction: direction): void => {
     if (direction === 'previous') setPresentedItemIdx(--presentedItemIdx)
     else if (direction === 'next') setPresentedItemIdx(++presentedItemIdx)
   }

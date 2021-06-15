@@ -7,3 +7,4 @@ export interface Question {
     difficulty: number;
 }
 
+export type direction = 'previous' | 'next';
